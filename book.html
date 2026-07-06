@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Now | Perfecto Detailing Studio</title>
+  <meta name="description" content="Book a premium detailing session with Perfecto Detailing Studio. Choose your service, preferred date, and send your request instantly." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@300;400;600&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" /></noscript>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <a href="index.html" class="logo">
+          <img src="assets/A.png" alt="Perfecto Detailing Studio" />
+        </a>
+        <div class="brand-text">
+          <h1>Perfecto Detailing Studio</h1>
+          <p>Luxury detailing &middot; Elite resale</p>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#inventory">Luxury Cars</a>
+        <a href="index.html#why-us">Why Us</a>
+        <a href="book.html" class="btn btn-primary">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero booking-hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Book your premium appointment</div>
+          <h2>
+            Reserve your detailing experience <br />
+            <span class="accent">for a flawless luxury finish.</span>
+          </h2>
+          <p>
+            Choose a service, select your preferred date, and send a request directly to our studio. Our team will confirm your appointment within one business day.
+          </p>
+          <div class="hero-actions">
+            <a href="index.html" class="btn btn-outline">Return Home</a>
+            <a href="#booking-form" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking-page">
+      <div class="container booking-grid">
+        <article class="booking-form-card">
+          <div class="section-title">
+            <span class="section-tag">Schedule a session</span>
+            <div class="accent-divider"></div>
+            <h3>Complete the booking form below</h3>
+            <p>
+              Tell us your vehicle type, preferred service, and appointment window. We will contact you with availability and package recommendations.
+            </p>
+          </div>
+
+          <form id="booking-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="(123) 456-7890" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required />
+              </div>
+              <div class="form-group">
+                <label for="service">Select Service</label>
+                <select id="service" name="service" class="form-input" required>
+                  <option value="">Choose a service</option>
+                  <option value="paint-correction">Paint Correction</option>
+                  <option value="ceramic-coating">Ceramic Coating</option>
+                  <option value="interior-restoration">Interior Restoration</option>
+                  <option value="full-detail">Full Premium Detail</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="date">Preferred Date</label>
+                <input type="date" id="date" name="date" class="form-input" required />
+              </div>
+              <div class="form-group">
+                <label for="time">Preferred Time</label>
+                <input type="time" id="time" name="time" class="form-input" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Vehicle Details / Notes</label>
+              <textarea id="message" name="message" class="form-textarea" rows="5" placeholder="Make, model, year, and any special requests"></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Send Booking Request</button>
+            </div>
+            <div id="form-success" class="success-message" role="status">
+              Thank you! Your request has been sent. We will contact you within one business day to confirm your time and service package.
+            </div>
+          </form>
+        </article>
+
+        <aside class="booking-details">
+          <div class="booking-info-card">
+            <h4>Why book with Perfecto</h4>
+            <ul>
+              <li>Dedicated appointment slots for premium vehicles</li>
+              <li>Studio-grade finishes with ceramic protection</li>
+              <li>Personalized service plans for each luxury model</li>
+              <li>Fast confirmation and concierge support</li>
+            </ul>
+          </div>
+
+          <div class="booking-info-card">
+            <h4>Top package options</h4>
+            <div class="package-list">
+              <div>
+                <strong>Signature Exterior</strong>
+                <p>Paint correction, wash, sealant, and trim restoration.</p>
+              </div>
+              <div>
+                <strong>Ceramic Protection</strong>
+                <p>Durable coating with hydrophobic shine and long-term defense.</p>
+              </div>
+              <div>
+                <strong>Luxury Interior</strong>
+                <p>Deep cleaning, leather conditioning, and cabin renewal.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="booking-info-card booking-contact-card">
+            <h4>Need help?</h4>
+            <p>Email us at <a href="mailto:info@perfectodetailing.com">info@perfectodetailing.com</a> or call <a href="tel:+1234567890">+1 (234) 567-890</a>.</p>
+            <p>Appointments are available Monday through Saturday.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-wrap">
+      <p>&copy; 2026 Perfecto Detailing Studio. All rights reserved.</p>
+      <p>Luxury detailing. Premium resale. Elevated presence.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('booking-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      var success = document.getElementById('form-success');
+      success.classList.add('visible');
+      this.reset();
+      setTimeout(function () {
+        success.classList.remove('visible');
+      }, 8000);
+    });
+  </script>
+</body>
+</html>

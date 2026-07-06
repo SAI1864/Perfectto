@@ -1,0 +1,56 @@
+/* ═══════════════════════════════════════════
+   FOOTER + RESPONSIVE
+   ═══════════════════════════════════════════ */
+footer {
+  padding: 40px 0 48px;
+  position: relative;
+  z-index: 1;
+}
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  color: rgba(245, 243, 240, 0.50);
+  font-size: 0.85rem;
+  font-weight: 300;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1080px) {
+  .hero-grid,
+  .cta-box,
+  .services-grid,
+  .cars-grid,
+  .features-grid,
+  .booking-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-visual { min-height: 520px; }
+  .car-card {
+    position: relative;
+    inset: 0;
+    transform: none;
+    min-height: auto;
+  }
+  .car-card:hover { transform: none; }
+  .booking-page { padding: 36px 0 64px; }
+}
+
+@media (max-width: 760px) {
+  .nav { flex-direction: column; gap: 18px; }
+  .nav-links { flex-wrap: wrap; justify-content: center; gap: 18px; }
+  .hero { padding-top: 48px; }
+  .hero h2 { font-size: 2.4rem; }
+  .stats { grid-template-columns: 1fr; }
+  .hero-visual { min-height: 480px; }
+  .car-card { min-height: auto; }
+  .cta-box { padding: 28px 22px; }
+  .footer-wrap { flex-direction: column; text-align: center; }
+  .booking-form-card,
+  .booking-details { padding: 24px; }
+  .form-row { grid-template-columns: 1fr; }
+  .form-row .form-group { margin-bottom: 16px; }
+}

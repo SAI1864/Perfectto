@@ -1,0 +1,129 @@
+/* ═══════════════════════════════════════════
+   HEADER — nav, brand, buttons
+   ═══════════════════════════════════════════ */
+/* ═══════════════════════════════════════════
+   HEADER
+═══════════════════════════════════════════ */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  /* Pure black */
+  background: #000;
+
+  /* Remove transparency */
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+
+  /* Remove border */
+  border-bottom: none;
+
+  /* Optional subtle luxury shadow */
+  box-shadow: 0 3px 20px rgba(0,0,0,.45);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand .logo {
+  flex-shrink: 0;
+  line-height: 0;
+  display: grid;
+  place-items: center;
+  background: var(--dark-surface);
+  border-radius: 0;
+  overflow: hidden;
+}
+.brand .logo img {
+  display: block;
+  height: 120px;
+  width: auto;
+}
+
+.brand-text h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.brand-text p {
+  font-size: 0.78rem;
+  color: var(--white-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 400;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.nav-links a {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(245, 243, 240, 0.75);
+  letter-spacing: 0.04em;
+  transition: color 0.3s ease;
+  position: relative;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -4px;
+  width: 0;
+  height: 1.5px;
+  background: var(--red);
+  transition: width 0.35s ease;
+}
+.nav-links a:hover { color: #fff; }
+.nav-links a:hover::after { width: 100%; }
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--red) 0%, var(--green-deep) 100%);
+  color: #fff;
+  box-shadow: 0 14px 34px -6px rgba(139, 20, 40, 0.35);
+}
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 20px 44px -6px rgba(139, 20, 40, 0.45);
+}
+
+.btn-outline {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--white);
+}
+.btn-outline:hover {
+  border-color: var(--red-light);
+  background: rgba(196, 30, 58, 0.10);
+  transform: translateY(-3px);
+}

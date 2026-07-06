@@ -1,0 +1,164 @@
+/* ═══════════════════════════════════════════
+   BASE — variables, reset, body, container
+   ═══════════════════════════════════════════ */
+:root {
+  --red-deep:   #7A1122;
+  --red:        #A6192E;
+  --red-mid:    #C4293F;
+  --red-light:  #C4293F;
+  --red-glow:   rgba(166, 25, 46, 0.40);
+
+  --green-deep:  #082C22;
+  --green:       #0C3B2E;
+  --green-mid:   #1C6B52;
+  --green-light: #1C6B52;
+  --green-glow:  rgba(28, 107, 82, 0.35);
+
+  --white:        #F7F5F0;
+  --white-dim:    rgba(201, 199, 192, 0.70);
+  --white-dimmer: rgba(201, 199, 192, 0.40);
+  --white-subtle: rgba(247, 245, 240, 0.08);
+
+  --dark:         #0A0A0A;
+  --dark-surface: #111210;
+  --dark-surface-alt: #16171A;
+  --dark-surface-soft: #1D1F1C;
+  --card-bg:      rgba(255, 255, 255, 0.05);
+  --card-border:  rgba(255, 255, 255, 0.08);
+  --shadow-sm:    0 8px 32px rgba(0, 0, 0, 0.30);
+  --shadow-lg:    0 30px 80px rgba(0, 0, 0, 0.50);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Poppins", sans-serif;
+  background:
+    radial-gradient(ellipse 90% 60% at 5% 15%, rgba(14, 45, 35, 0.35), transparent 50%),
+    radial-gradient(ellipse 80% 55% at 95% 85%, rgba(20, 80, 60, 0.20), transparent 50%),
+    linear-gradient(170deg, #0A0A0A 0%, #111210 35%, #16171A 70%, #1D1F1C 100%);
+  color: var(--white);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+
+.container {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+}
+
+.bg-orb { display: none; }
+
+.accent-divider {
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--red), var(--green));
+  border-radius: 4px;
+  margin: 14px 0 18px;
+}
+
+section {
+  position: relative;
+  z-index: 1;
+  padding: 80px 0;
+}
+
+.section-title {
+  max-width: 700px;
+  margin-bottom: 36px;
+}
+.section-title .section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--red-light);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.section-title .section-tag::before {
+  content: "◇";
+  font-size: 0.5rem;
+}
+.section-title .accent-divider { margin: 10px 0 14px; }
+.section-title h3 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.5rem, 2.4vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+.section-title p {
+  color: var(--white-dim);
+  line-height: 1.7;
+  font-weight: 300;
+  font-size: 0.85rem;
+}
+
+.glass-card {
+  position: relative;
+  padding: 32px 28px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+}
+.glass-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(196, 30, 58, 0.30), rgba(26, 158, 104, 0.30), transparent);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.glass-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(196, 30, 58, 0.18);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.40);
+}
+.glass-card:hover::before { opacity: 1; }
+.glass-card::after {
+  content: "";
+  position: absolute;
+  inset: auto -30% -50% auto;
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08), transparent 60%);
+  pointer-events: none;
+}
+
+.icon-box {
+  width: 56px; height: 56px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, rgba(139, 20, 40, 0.15), rgba(10, 92, 62, 0.18));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 1.3rem;
+}
+
+.glass-card h4 {
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+.glass-card p {
+  color: rgba(245, 243, 240, 0.70);
+  line-height: 1.65;
+  font-size: 0.82rem;
+  font-weight: 300;
+}
