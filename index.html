@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Perfecto Detailing Studio</title>
-  <meta name="description" content="Perfecto Detailing Studio — elite car detailing, ceramic protection, paint correction, and luxury automotive resale." />
+  <meta name="description" content="Perfecto Detailing Studio - elite paint correction, ceramic coating, interior restoration, and luxury automotive detailing." />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="format-detection" content="telephone=no" />
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@300;400;600&display=swap" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
   <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" /></noscript>
 
-  <!-- Styles -->
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/header.css" />
   <link rel="stylesheet" href="css/hero.css" />
@@ -21,8 +21,6 @@
   <link rel="stylesheet" href="css/footer.css" />
 </head>
 <body>
-
-  <!-- Header -->
   <header>
     <div class="container nav">
       <div class="brand">
@@ -31,13 +29,15 @@
         </a>
         <div class="brand-text">
           <h1>Perfecto Detailing Studio</h1>
-          <p>Luxury detailing &middot; Elite resale</p>
+          <p>Luxury detailing &middot; Ceramic protection</p>
         </div>
       </div>
       <nav class="nav-links">
         <a href="#services">Services</a>
+        <a href="#journal">Journal</a>
         <a href="#packages">Packages</a>
-        <a href="#inventory">Luxury Cars</a>
+        <a href="#process">Process</a>
+        <a href="#partners">Partners</a>
         <a href="#faq">FAQs</a>
         <a href="book.html" class="btn btn-primary">Book Now</a>
       </nav>
@@ -45,25 +45,34 @@
   </header>
 
   <main>
-
-    <!-- Hero -->
     <section class="hero">
+      <div class="hero-background" aria-hidden="true">
+        <div class="hero-car-rail hero-car-rail-primary"></div>
+        <div class="hero-car-rail hero-car-rail-secondary"></div>
+        <div class="hero-light hero-light-red"></div>
+        <div class="hero-light hero-light-green"></div>
+      </div>
+      <div class="hero-orbit" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow">3D premium automotive experience</div>
+          <div class="eyebrow">Premium automotive detailing studio</div>
           <h2>
-            Precision shine, elite finish,<br />
-            <span class="accent">luxurious cars that speak power.</span>
+            Precision correction, deep gloss,<br />
+            <span class="accent">a finish that feels bespoke.</span>
           </h2>
           <p>
             Perfecto Detailing Studio delivers high-end car detailing, ceramic
-            protection, paint correction, interior restoration, and luxury car
-            reselling — all in one elevated destination. Built to impress,
-            crafted to perform.
+            protection, paint correction, interior restoration, and maintenance
+            care for owners who expect every surface to look intentional.
+            Built to protect, refined to impress.
           </p>
           <div class="hero-actions">
             <a href="book.html" class="btn btn-primary">Schedule Detailing</a>
-            <a href="#inventory" class="btn btn-outline">View Luxury Inventory</a>
+            <a href="#process" class="btn btn-outline">Explore Our Process</a>
           </div>
           <div class="stats">
             <div class="stat-card">
@@ -71,8 +80,8 @@
               <p>Premium vehicles detailed with showroom-grade perfection</p>
             </div>
             <div class="stat-card">
-              <h3>40+</h3>
-              <p>Luxury models available through premium resale sourcing</p>
+              <h3>12+</h3>
+              <p>Specialized correction, coating, and interior care treatments</p>
             </div>
             <div class="stat-card">
               <h3>99%</h3>
@@ -89,7 +98,7 @@
                   <div class="dots">
                     <span></span><span></span><span></span>
                   </div>
-                  <div class="mini-badge">✦ Perfecto Experience</div>
+                  <div class="mini-badge">&#10022; Perfecto Experience</div>
                 </div>
                 <div class="hero-car-img">
                   <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=900&auto=format&fit=crop&q=80" alt="Mercedes-Benz S-Class" decoding="async" />
@@ -100,8 +109,8 @@
                     <p>Exterior correction, deep gloss finish, and premium coating layers.</p>
                   </div>
                   <div class="screen-box">
-                    <h4>Luxury Resale</h4>
-                    <p>Handpicked elite cars verified for presentation and prestige.</p>
+                    <h4>Protection Lab</h4>
+                    <p>Careful prep, panel inspection, and durable ceramic protection.</p>
                   </div>
                 </div>
               </div>
@@ -111,7 +120,46 @@
       </div>
     </section>
 
-    <!-- Services -->
+    <section id="journal" class="journal-section">
+      <div class="container">
+        <div class="section-title section-title-row">
+          <div>
+            <span class="section-tag">Studio journal</span>
+            <div class="accent-divider"></div>
+            <h3>Stories, care guides, and premium ownership insight</h3>
+            <p>Fresh editorial features for clients who care about finish quality, protection technology, and the details behind a prestige vehicle.</p>
+          </div>
+          <a href="book.html" class="btn btn-outline">Ask an Expert</a>
+        </div>
+        <div class="journal-scroll" aria-label="Studio journal features">
+          <article class="journal-card">
+            <img src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?w=900&auto=format&fit=crop&q=78" alt="Luxury car paint correction under studio lighting" loading="lazy" decoding="async" />
+            <div class="journal-overlay">
+              <span>Paint Care</span>
+              <h4>How multi-stage correction brings depth back to tired paint</h4>
+              <p>Learn when a premium polish is worth it and how it changes clarity before coating.</p>
+            </div>
+          </article>
+          <article class="journal-card">
+            <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=900&auto=format&fit=crop&q=78" alt="Detailed luxury vehicle interior" loading="lazy" decoding="async" />
+            <div class="journal-overlay">
+              <span>Interior</span>
+              <h4>Inside a proper luxury cabin refresh</h4>
+              <p>Leather, vents, trim, and scent are handled as one complete comfort experience.</p>
+            </div>
+          </article>
+          <article class="journal-card">
+            <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?w=900&auto=format&fit=crop&q=78" alt="Sports car prepared under studio lighting" loading="lazy" decoding="async" />
+            <div class="journal-overlay">
+              <span>Gloss Prep</span>
+              <h4>The inspection steps behind a true showroom finish</h4>
+              <p>Lighting, paint depth checks, decontamination, and polish planning shape the final result.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="services">
       <div class="container">
         <div class="section-title">
@@ -122,17 +170,17 @@
         </div>
         <div class="services-grid">
           <article class="glass-card">
-            <div class="icon-box">✨</div>
+            <div class="icon-box">&#10024;</div>
             <h4>Paint Correction</h4>
             <p>Multi-stage polishing removes swirl marks, oxidation, and dullness to reveal depth, clarity, and mirror-level shine.</p>
           </article>
           <article class="glass-card">
-            <div class="icon-box">🛡️</div>
+            <div class="icon-box">&#128737;</div>
             <h4>Ceramic Coating</h4>
             <p>Advanced surface protection with hydrophobic performance, gloss enhancement, and long-lasting resistance to contaminants.</p>
           </article>
           <article class="glass-card">
-            <div class="icon-box">🧼</div>
+            <div class="icon-box">&#129529;</div>
             <h4>Interior Restoration</h4>
             <p>Deep-cleaning and conditioning for leather, trims, carpets, and dashboards to bring back a refined luxury cabin feel.</p>
           </article>
@@ -140,7 +188,6 @@
       </div>
     </section>
 
-    <!-- Packages -->
     <section id="packages">
       <div class="container">
         <div class="section-title">
@@ -184,51 +231,98 @@
       </div>
     </section>
 
-    <!-- Inventory -->
-    <section id="inventory">
+    <section id="process">
       <div class="container">
         <div class="section-title">
-          <span class="section-tag">Luxury inventory</span>
+          <span class="section-tag">Studio process</span>
           <div class="accent-divider"></div>
-          <h3>Premium cars ready for resale and delivery</h3>
-          <p>Handpicked luxury vehicles verified for presentation, condition, and prestige — ready for serious buyers.</p>
+          <h3>A meticulous detailing workflow for lasting luxury</h3>
+          <p>Every vehicle moves through a disciplined studio process designed to clean deeply, correct safely, and protect the finish for daily presence.</p>
         </div>
         <div class="cars-grid">
-          <article class="glass-card car-sale-card">
+          <article class="glass-card process-card">
             <div>
-              <span class="price-tag">Starting at $85,000</span>
+              <span class="price-tag">Step 01</span>
               <div class="car-thumb-img">
-                <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=600&auto=format&fit=crop&q=75" alt="Mercedes-Benz S-Class" loading="lazy" decoding="async" />
+                <img src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?w=600&auto=format&fit=crop&q=75" alt="Vehicle paint inspected under studio lighting" loading="lazy" decoding="async" />
               </div>
-              <h4>Mercedes-Benz S-Class</h4>
-              <p>Elegant flagship comfort with executive styling, advanced tech, and a commanding premium road presence.</p>
+              <h4>Inspection & Decontamination</h4>
+              <p>Paint, glass, wheels, trim, and interior materials are assessed before a careful wash, iron removal, clay treatment, and surface reset.</p>
             </div>
           </article>
-          <article class="glass-card car-sale-card">
+          <article class="glass-card process-card">
             <div>
-              <span class="price-tag">Starting at $112,000</span>
+              <span class="price-tag">Step 02</span>
               <div class="car-thumb-img">
-                <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600&auto=format&fit=crop&q=75" alt="BMW 7 Series" loading="lazy" decoding="async" />
+                <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=600&auto=format&fit=crop&q=75" alt="Luxury vehicle polished for paint correction" loading="lazy" decoding="async" />
               </div>
-              <h4>BMW 7 Series</h4>
-              <p>Dynamic luxury sedan combining high performance, refined interiors, and a clean prestige-focused silhouette.</p>
+              <h4>Paint Correction & Refinement</h4>
+              <p>Swirls, haze, oxidation, and light defects are corrected through measured machine polishing for clarity, color depth, and gloss.</p>
             </div>
           </article>
-          <article class="glass-card car-sale-card">
+          <article class="glass-card process-card">
             <div>
-              <span class="price-tag">Starting at $138,000</span>
+              <span class="price-tag">Step 03</span>
               <div class="car-thumb-img">
-                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&auto=format&fit=crop&q=75" alt="Porsche Panamera" loading="lazy" decoding="async" />
+                <img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=600&auto=format&fit=crop&q=75" alt="Water beading on a protected car finish" loading="lazy" decoding="async" />
               </div>
-              <h4>Porsche Panamera</h4>
-              <p>Sport-luxury engineering for buyers seeking striking design, speed, and top-tier driving character.</p>
+              <h4>Ceramic Protection & Final Detail</h4>
+              <p>Coating, trim dressing, glass treatment, tire finish, and final inspection create a protected vehicle that leaves the studio ready to be noticed.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Testimonials -->
+    <section id="partners" class="partners-section">
+      <div class="container">
+        <div class="section-title centered-title">
+          <span class="section-tag">Professional network</span>
+          <div class="accent-divider"></div>
+          <h3>Trusted across premium automotive circles</h3>
+          <p>Built for private owners, collectors, performance shops, luxury clubs, and enthusiast communities that expect careful studio work.</p>
+        </div>
+        <div class="partner-grid" aria-label="Partner categories">
+          <div class="partner-logo logo-penske">
+            <strong>TEAM<br>PENSKE</strong>
+          </div>
+          <div class="partner-logo logo-rahal">
+            <span class="logo-swoosh"></span>
+            <strong>RAHAL</strong>
+            <small>DUCATI MOTO</small>
+          </div>
+          <div class="partner-logo logo-fireball">
+            <span class="logo-flame"></span>
+            <strong>Fireball</strong>
+          </div>
+          <div class="partner-logo logo-pca">
+            <span>PCA</span>
+            <small>PORSCHE CLUB</small>
+          </div>
+          <div class="partner-logo logo-audi">
+            <span class="rings"><i></i><i></i><i></i><i></i></span>
+            <strong>Audi</strong>
+            <small>Club North America</small>
+          </div>
+          <div class="partner-logo logo-iron">
+            <strong>IRON FELLOWS</strong>
+            <small>Performance Driving School</small>
+          </div>
+          <div class="partner-logo logo-jeep">
+            <strong>Jeep</strong>
+            <small>Jamboree USA</small>
+          </div>
+          <div class="partner-logo logo-hagerty">
+            <strong>HAGERTY</strong>
+          </div>
+        </div>
+        <div class="partner-certification">
+          <span>Perfecto certified studio</span>
+          <strong>Premium detailing, ceramic protection, paint correction, and interior care partner</strong>
+        </div>
+      </div>
+    </section>
+
     <section id="testimonials">
       <div class="container">
         <div class="section-title">
@@ -239,21 +333,21 @@
         </div>
         <div class="testimonials-grid">
           <article class="testimonial-card">
-            <p>“Perfecto brought my S-Class back to showroom condition and made every surface feel brand new. Their coordination and final result were outstanding.”</p>
+            <p>&ldquo;Perfecto brought my S-Class back to showroom condition and made every surface feel brand new. Their coordination and final result were outstanding.&rdquo;</p>
             <div class="testimonial-meta">
               <span>Daniel H.</span>
               <span>Mercedes-Benz S-Class owner</span>
             </div>
           </article>
           <article class="testimonial-card">
-            <p>“The ceramic coating package delivered amazing depth and water beading. I trust Perfecto with every detail and appreciate their transparent communication.”</p>
+            <p>&ldquo;The ceramic coating package delivered amazing depth and water beading. I trust Perfecto with every detail and appreciate their transparent communication.&rdquo;</p>
             <div class="testimonial-meta">
               <span>Riya S.</span>
               <span>BMW 7 Series owner</span>
             </div>
           </article>
           <article class="testimonial-card">
-            <p>“From booking to delivery, the team handled my Panamera exactly as promised. The interior restoration is now my favorite part of the car.”</p>
+            <p>&ldquo;From booking to final inspection, the team handled my Panamera exactly as promised. The interior restoration is now my favorite part of the car.&rdquo;</p>
             <div class="testimonial-meta">
               <span>Marcus L.</span>
               <span>Porsche Panamera owner</span>
@@ -263,41 +357,39 @@
       </div>
     </section>
 
-    <!-- Why Us -->
     <section id="why-us">
       <div class="container">
         <div class="section-title">
           <span class="section-tag">Why choose us</span>
           <div class="accent-divider"></div>
-          <h3>A bold brand presence with a premium customer journey</h3>
-          <p>Built to position your studio as modern, luxurious, and trusted for both vehicle care and exclusive resale.</p>
+          <h3>A premium studio experience for demanding owners</h3>
+          <p>Built around careful inspection, refined technique, high-grade products, and a calm customer journey from booking to final handover.</p>
         </div>
         <div class="features-grid">
           <article class="glass-card feature-item">
-            <div class="icon-box">🚗</div>
-            <h4>Luxury-first branding</h4>
-            <p>Strong visual styling that communicates prestige and exclusivity.</p>
+            <div class="icon-box">&#128663;</div>
+            <h4>Luxury vehicle expertise</h4>
+            <p>Methods tailored for premium paint, delicate trim, leather, wheels, glass, and high-end cabin materials.</p>
           </article>
           <article class="glass-card feature-item">
-            <div class="icon-box">🎯</div>
-            <h4>Lead-focused layout</h4>
-            <p>Calls to action positioned to drive bookings and buyer inquiries.</p>
+            <div class="icon-box">&#127919;</div>
+            <h4>Detail-focused inspection</h4>
+            <p>Every appointment starts with finish assessment, service guidance, and clear expectations.</p>
           </article>
           <article class="glass-card feature-item">
-            <div class="icon-box">🌐</div>
-            <h4>Modern 3D feel</h4>
-            <p>Layered depth, shadows, and motion create a high-end immersive look.</p>
+            <div class="icon-box">&#127760;</div>
+            <h4>Premium protection systems</h4>
+            <p>Ceramic coating, sealants, trim care, and maintenance plans built for long-term appearance.</p>
           </article>
           <article class="glass-card feature-item">
-            <div class="icon-box">📱</div>
-            <h4>Responsive design</h4>
-            <p>Optimised for desktop, tablet, and mobile without losing visual impact.</p>
+            <div class="icon-box">&#128241;</div>
+            <h4>Concierge communication</h4>
+            <p>Simple booking, appointment confirmation, progress updates, and a polished handover experience.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- FAQs -->
     <section id="faq">
       <div class="container">
         <div class="section-title">
@@ -327,7 +419,6 @@
       </div>
     </section>
 
-    <!-- Contact / CTA -->
     <section id="contact">
       <div class="container">
         <div class="cta-box">
@@ -336,7 +427,7 @@
               <span class="section-tag">Contact</span>
               <div class="accent-divider"></div>
               <h3>Secure your appointment with the studio team</h3>
-              <p>Book a premium detailing session, request a luxury resale consultation, or ask about our full-service VIP packages.</p>
+              <p>Book a premium detailing session, request ceramic coating guidance, or ask about our full-service VIP care packages.</p>
             </div>
             <div class="hero-actions" style="margin-top:24px;margin-bottom:0;">
               <a href="book.html" class="btn btn-primary">Book Now</a>
@@ -347,23 +438,20 @@
             <ul>
               <li>Email: <a href="mailto:info@perfectodetailing.com">info@perfectodetailing.com</a></li>
               <li>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></li>
-              <li>Studio hours: Mon — Sat, 8am — 6pm</li>
+              <li>Studio hours: Mon &mdash; Sat, 8am &mdash; 6pm</li>
               <li>Luxury appointments by reservation only</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- Footer -->
   <footer>
     <div class="container footer-wrap">
       <p>&copy; 2026 Perfecto Detailing Studio. All rights reserved.</p>
-      <p>Luxury detailing. Premium resale. Elevated presence.</p>
+      <p>Luxury detailing. Ceramic protection. Elevated finish.</p>
     </div>
   </footer>
-
 </body>
 </html>

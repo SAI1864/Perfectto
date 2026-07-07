@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════
-   SECTIONS — services, inventory, why-us, cta
+   SECTIONS — services, process, partners, why-us, cta
    ═══════════════════════════════════════════ */
 
 /* ── Grids ── */
@@ -13,9 +13,317 @@
 .cars-grid     { grid-template-columns: repeat(3, 1fr); }
 .features-grid { grid-template-columns: repeat(4, 1fr); }
 
-/* ── Car sale card ── */
-.car-sale-card { min-height: 380px; display: flex; flex-direction: column; }
-.car-sale-card > div:first-child {
+.section-title-row {
+  max-width: none;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 28px;
+}
+.section-title-row > div {
+  max-width: 720px;
+}
+.section-title-row .btn {
+  flex: 0 0 auto;
+  margin-bottom: 8px;
+}
+
+/* Journal */
+.journal-section {
+  padding-top: 54px;
+}
+.journal-scroll {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.journal-card {
+  min-height: 430px;
+  border-radius: 28px;
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow-sm);
+  background: var(--dark-surface);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.journal-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(196, 30, 58, 0.20);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.42);
+}
+.journal-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  transform: scale(1.02);
+  transition: transform 0.35s ease;
+}
+.journal-card:hover img {
+  transform: scale(1.07);
+}
+.journal-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.08) 10%, rgba(0, 0, 0, 0.42) 48%, rgba(0, 0, 0, 0.88) 100%),
+    linear-gradient(135deg, rgba(122, 17, 34, 0.25), rgba(8, 44, 34, 0.18));
+}
+.journal-overlay {
+  min-height: 430px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 28px;
+}
+.journal-overlay span {
+  width: fit-content;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(247, 245, 240, 0.92);
+  color: #111;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: auto;
+}
+.journal-overlay h4 {
+  max-width: 420px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.35rem, 2.1vw, 2rem);
+  line-height: 1.18;
+  margin: 190px 0 12px;
+  letter-spacing: -0.02em;
+}
+.journal-overlay p {
+  max-width: 420px;
+  color: rgba(247, 245, 240, 0.74);
+  font-size: 0.86rem;
+  line-height: 1.7;
+}
+
+/* Partners */
+.partners-section {
+  background: rgba(255, 255, 255, 0.025);
+}
+.centered-title {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.centered-title .section-tag {
+  justify-content: center;
+}
+.centered-title .accent-divider {
+  margin-left: auto;
+  margin-right: auto;
+}
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px 28px;
+  margin-top: 42px;
+}
+.partner-logo {
+  min-height: 128px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 24px 20px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #111;
+  text-align: center;
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.22);
+  filter: grayscale(1);
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+.partner-logo strong,
+.partner-logo span {
+  display: block;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+.partner-logo small {
+  display: block;
+  color: #1d1d1d;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.partner-logo:hover {
+  transform: translateY(-4px);
+  background: #fff;
+  box-shadow: 0 26px 58px rgba(0, 0, 0, 0.30);
+}
+.logo-penske strong {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(1.55rem, 3vw, 2.5rem);
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -0.08em;
+  text-decoration: underline;
+  text-decoration-thickness: 5px;
+  text-underline-offset: 4px;
+}
+.logo-rahal .logo-swoosh {
+  width: 82px;
+  height: 54px;
+  border-radius: 0 80px 80px 0;
+  border-right: 16px solid #111;
+  transform: skewX(-12deg);
+}
+.logo-rahal strong {
+  font-family: "Playfair Display", serif;
+  font-size: 1.55rem;
+  font-style: italic;
+}
+.logo-rahal small {
+  letter-spacing: 0.26em;
+}
+.logo-fireball {
+  flex-direction: row;
+  gap: 12px;
+}
+.logo-fireball strong {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.65rem, 2.6vw, 2.25rem);
+  font-weight: 800;
+  font-style: italic;
+}
+.logo-flame {
+  width: 52px;
+  height: 32px;
+  border: 4px solid #111;
+  border-right-width: 12px;
+  border-radius: 70% 25% 70% 25%;
+  transform: rotate(-12deg);
+  position: relative;
+}
+.logo-flame::after {
+  content: "";
+  position: absolute;
+  right: -23px;
+  top: 5px;
+  width: 22px;
+  height: 22px;
+  border: 4px solid #111;
+  border-radius: 50%;
+  background: #fff;
+}
+.logo-pca span {
+  width: 82px;
+  height: 82px;
+  display: grid;
+  place-items: center;
+  border: 4px double #111;
+  border-radius: 50%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.65rem;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+}
+.logo-audi .rings {
+  display: flex;
+  gap: 0;
+}
+.logo-audi .rings i {
+  width: 42px;
+  height: 42px;
+  margin-left: -8px;
+  border: 5px solid #111;
+  border-radius: 50%;
+}
+.logo-audi .rings i:first-child {
+  margin-left: 0;
+}
+.logo-audi strong {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-top: 2px;
+}
+.logo-audi small {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: none;
+}
+.logo-iron strong {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(1rem, 1.9vw, 1.45rem);
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -0.05em;
+}
+.logo-iron::before {
+  content: "";
+  width: 92px;
+  height: 34px;
+  border-top: 10px solid #111;
+  border-left: 10px solid transparent;
+  border-right: 38px solid transparent;
+  transform: skewX(-22deg);
+}
+.logo-jeep strong {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(2rem, 3vw, 2.7rem);
+  font-weight: 900;
+  letter-spacing: -0.06em;
+}
+.logo-jeep small {
+  padding: 3px 10px;
+  border-top: 3px solid #111;
+  border-bottom: 3px solid #111;
+  font-family: "Playfair Display", serif;
+  font-size: 0.72rem;
+}
+.logo-hagerty strong {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(1.65rem, 3vw, 2.5rem);
+  font-weight: 900;
+  letter-spacing: -0.08em;
+}
+.partner-certification {
+  width: fit-content;
+  max-width: 100%;
+  display: grid;
+  gap: 6px;
+  margin: 38px auto 0;
+  padding: 16px 24px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+}
+.partner-certification span {
+  color: var(--red-light);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.partner-certification strong {
+  color: rgba(247, 245, 240, 0.82);
+  font-size: 0.86rem;
+  font-weight: 500;
+}
+
+/* ── Process card ── */
+.process-card { min-height: 380px; display: flex; flex-direction: column; }
+.process-card > div:first-child {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -48,13 +356,13 @@
   display: block;
 }
 
-.car-sale-card h4 {
+.process-card h4 {
   font-family: "Playfair Display", serif;
   font-size: 1.15rem;
   font-weight: 600;
   margin-bottom: 8px;
 }
-.car-sale-card p {
+.process-card p {
   font-size: 0.88rem;
   line-height: 1.7;
   color: rgba(245, 243, 240, 0.65);
@@ -393,5 +701,216 @@ select.form-input {
   .faq-list,
   .booking-grid {
     grid-template-columns: 1fr;
+  }
+  .section-title-row {
+    align-items: start;
+    flex-direction: column;
+  }
+  .journal-scroll,
+  .partner-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .journal-scroll {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 2px 0 14px;
+    scroll-snap-type: x mandatory;
+  }
+  .journal-card {
+    flex: 0 0 min(84vw, 360px);
+    min-height: 380px;
+    scroll-snap-align: start;
+  }
+  .journal-overlay {
+    min-height: 380px;
+    padding: 22px;
+  }
+  .journal-overlay h4 {
+    margin-top: 150px;
+  }
+  .partner-grid {
+    grid-template-columns: 1fr;
+  }
+  .partner-certification {
+    border-radius: 24px;
+  }
+}
+
+.services-grid,
+.cars-grid,
+.features-grid,
+.packages-grid,
+.testimonials-grid,
+.booking-grid {
+  align-items: stretch;
+}
+
+.journal-card,
+.package-card,
+.testimonial-card,
+.faq-list details,
+.booking-form-card,
+.booking-details,
+.booking-info-card,
+.cta-box,
+.cta-panel,
+.partner-logo {
+  border-radius: 16px;
+}
+
+.section-title-row .btn,
+.cta-box .btn,
+.hero-actions .btn {
+  box-shadow: none;
+}
+
+.cta-box {
+  border-radius: 18px;
+}
+
+.partner-grid {
+  gap: 18px;
+}
+
+.partner-logo {
+  min-height: 116px;
+}
+
+.package-card,
+.testimonial-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.035));
+}
+
+.faq-list details {
+  margin: 0;
+}
+
+@media (max-width: 1080px) {
+  .journal-scroll,
+  .partner-grid,
+  .services-grid,
+  .cars-grid,
+  .features-grid,
+  .packages-grid,
+  .testimonials-grid,
+  .booking-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title-row {
+    align-items: flex-start;
+  }
+
+  .cta-box {
+    padding: 28px 22px;
+  }
+
+  .booking-form-card,
+  .booking-details {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 760px) {
+  .section-title-row {
+    gap: 18px;
+  }
+
+  .journal-scroll {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    padding: 2px 0 14px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .journal-card {
+    flex: 0 0 min(84vw, 360px);
+    min-height: 360px;
+    scroll-snap-align: start;
+  }
+
+  .journal-overlay {
+    min-height: 360px;
+    padding: 20px;
+  }
+
+  .journal-overlay h4 {
+    margin: 145px 0 10px;
+  }
+
+  .journal-overlay p {
+    font-size: 0.84rem;
+  }
+
+  .partner-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .partner-logo {
+    min-height: 110px;
+  }
+
+  .partner-certification {
+    width: 100%;
+    border-radius: 18px;
+    padding: 14px 18px;
+  }
+
+  .process-card {
+    min-height: 0;
+  }
+
+  .car-thumb-img {
+    height: 132px;
+  }
+
+  .cta-box {
+    padding: 24px 18px;
+    border-radius: 18px;
+  }
+
+  .cta-panel {
+    padding: 20px;
+  }
+
+  .booking-form-card,
+  .booking-details {
+    border-radius: 18px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-group {
+    margin-bottom: 16px;
+  }
+
+  .form-input,
+  .form-textarea,
+  select.form-input {
+    min-height: 46px;
+    border-radius: 14px;
+  }
+
+  .faq-list details {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .package-card,
+  .testimonial-card {
+    padding: 22px;
+  }
+
+  .booking-info-card {
+    padding: 20px;
+    border-radius: 18px;
   }
 }

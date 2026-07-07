@@ -162,3 +162,40 @@ section {
   font-size: 0.82rem;
   font-weight: 300;
 }
+
+@media (max-width: 760px) {
+  .container {
+    width: min(100% - 32px, 1180px);
+  }
+
+  section {
+    padding: 56px 0;
+  }
+
+  .section-title {
+    margin-bottom: 24px;
+  }
+
+  .section-title .section-tag {
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+  }
+
+  .section-title h3 {
+    font-size: clamp(1.55rem, 8vw, 1.95rem);
+    line-height: 1.15;
+  }
+
+  .glass-card {
+    padding: 24px 20px;
+    border-radius: 14px;
+  }
+
+  .glass-card h4 {
+    font-size: 0.98rem;
+  }
+
+  .glass-card p {
+    font-size: 0.9rem;
+  }
+}
