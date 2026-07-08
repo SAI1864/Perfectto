@@ -1,0 +1,18 @@
+.edge-debug/
+node_modules/
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# Tool caches
+.cache/
+.parcel-cache/
+.vite/
+
+# Logs and local environment
+*.log
+.env
+.env.*

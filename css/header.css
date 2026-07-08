@@ -30,6 +30,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 14px 0;
+  gap: 18px;
 }
 
 .brand {
@@ -72,6 +73,7 @@ header {
   display: flex;
   align-items: center;
   gap: 24px;
+  min-width: 0;
 }
 .nav-links a {
   font-size: 0.85rem;
@@ -159,10 +161,14 @@ header {
   white-space: nowrap;
 }
 
+.nav-toggle {
+  display: none;
+}
+
 @media (max-width: 1080px) {
   .nav {
     gap: 14px;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .brand-text h1 {
@@ -174,18 +180,48 @@ header {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .nav {
-    padding: 12px 0 14px;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 0 12px;
+  }
+
+  .brand {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 760px) {
+  header {
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.96), rgba(8, 8, 8, 0.88));
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+  }
+
+  .nav {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px 12px;
+    padding: 8px 0 10px;
   }
 
   .brand {
     width: 100%;
     gap: 12px;
+    justify-content: flex-start;
+    min-width: 0;
   }
 
   .brand .logo img {
-    height: 64px;
+    height: 54px;
   }
 
   .brand-text h1 {
@@ -198,26 +234,83 @@ header {
   }
 
   .nav-links {
+    grid-column: 1 / -1;
+    display: grid;
     width: 100%;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    overflow-x: auto;
-    gap: 10px;
-    padding-bottom: 2px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    max-width: 100%;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: max-height 0.28s ease, opacity 0.2s ease, transform 0.2s ease, padding 0.2s ease;
   }
 
-  .nav-links::-webkit-scrollbar {
-    display: none;
+  .nav-open .nav-links {
+    max-height: 320px;
+    padding: 8px 0 2px;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 
   .nav-links a {
-    flex: 0 0 auto;
-    padding: 8px 14px;
+    min-width: 0;
+    padding: 9px 7px;
     border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.035));
+    font-size: 0.72rem;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .nav-toggle {
+    width: 46px;
+    height: 46px;
+    display: inline-grid;
+    place-items: center;
+    gap: 4px;
+    padding: 11px;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 14px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.035));
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.26);
+    cursor: pointer;
+  }
+
+  .nav-toggle span {
+    width: 20px;
+    height: 2px;
+    display: block;
+    border-radius: 999px;
+    background: var(--white);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .nav-open .nav-toggle span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .nav-open .nav-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-open .nav-toggle span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  .nav-links .btn-primary {
+    grid-column: 1 / -1;
+    border-color: rgba(196, 41, 63, 0.34);
+    background: linear-gradient(135deg, var(--red) 0%, var(--green-deep) 100%);
+    color: #fff;
   }
 
   .nav-links a::after {
@@ -227,5 +320,34 @@ header {
   .btn {
     padding: 11px 18px;
     font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand {
+    gap: 10px;
+  }
+
+  .brand .logo img {
+    height: 48px;
+  }
+
+  .brand-text h1 {
+    font-size: 0.92rem;
+  }
+
+  .brand-text p {
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+  }
+
+  .nav-links {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .nav-links a {
+    padding: 8px 6px;
+    font-size: 0.7rem;
   }
 }

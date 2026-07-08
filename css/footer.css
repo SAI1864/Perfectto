@@ -19,42 +19,6 @@ footer {
 }
 
 /* ── Responsive ── */
-@media (max-width: 1080px) {
-  .hero-grid,
-  .cta-box,
-  .services-grid,
-  .cars-grid,
-  .features-grid,
-  .booking-grid {
-    grid-template-columns: 1fr;
-  }
-  .hero-visual { min-height: 520px; }
-  .car-card {
-    position: relative;
-    inset: 0;
-    transform: none;
-    min-height: auto;
-  }
-  .car-card:hover { transform: none; }
-  .booking-page { padding: 36px 0 64px; }
-}
-
-@media (max-width: 760px) {
-  .nav { flex-direction: column; gap: 18px; }
-  .nav-links { flex-wrap: wrap; justify-content: center; gap: 18px; }
-  .hero { padding-top: 48px; }
-  .hero h2 { font-size: 2.4rem; }
-  .stats { grid-template-columns: 1fr; }
-  .hero-visual { min-height: 480px; }
-  .car-card { min-height: auto; }
-  .cta-box { padding: 28px 22px; }
-  .footer-wrap { flex-direction: column; text-align: center; }
-  .booking-form-card,
-  .booking-details { padding: 24px; }
-  .form-row { grid-template-columns: 1fr; }
-  .form-row .form-group { margin-bottom: 16px; }
-}
-
 footer {
   background: rgba(0, 0, 0, 0.18);
 }
@@ -69,6 +33,8 @@ footer {
   }
 
   .footer-wrap {
+    flex-direction: column;
+    text-align: center;
     gap: 10px;
     padding-top: 18px;
   }
@@ -78,44 +44,4 @@ footer {
     line-height: 1.5;
   }
 
-  .nav {
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  .nav-links {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    gap: 10px;
-  }
-
-  .hero {
-    padding-top: 42px;
-  }
-
-  .hero h2 {
-    font-size: clamp(2.1rem, 10vw, 2.8rem);
-  }
-
-  .stats {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-visual {
-    min-height: 0;
-  }
-
-  .cta-box {
-    padding: 24px 18px;
-  }
-
-  .booking-form-card,
-  .booking-details {
-    padding: 22px;
-  }
-
-  .form-row {
-    grid-template-columns: 1fr;
-  }
 }
